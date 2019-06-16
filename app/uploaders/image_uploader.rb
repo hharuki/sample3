@@ -9,6 +9,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   def size_range
     0..10.megabytes
   end
+   def extension_white_list
+    %w(jpg jpeg  png)
+   end
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
