@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-   def index
+  def index
     @topics = Topic.all
   end
   def new
@@ -7,7 +7,7 @@ class TopicsController < ApplicationController
   end
   
   def create 
-    @toopic = current_user.topics.new(topic_params)
+    @topic = current_user.topics.new(topic_params)
     
     if @topic.save
       redirect_to topics_path, success: '投稿に成功しました'
