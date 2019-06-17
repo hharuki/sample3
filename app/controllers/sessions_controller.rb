@@ -4,7 +4,8 @@ class SessionsController < ApplicationController
   
   def create
     @user = User.new(user_params)
-    if @user.save
+    @password = User.new(password_params)
+    if @user.save  && @password.save
       redirect_to root_path, success: 'ログインに成功しました'
     else
        flash.now[:danger] = 'ログインに失敗しました'
@@ -30,5 +31,10 @@ end
 
   private
   def user_params
-    params.require(:user).permit(:email, :password)
+    params.require(:user).permit(:email)
+  end
+  
+  private
+  def password_params
+    params.require(:user).permit(:password)
   end
