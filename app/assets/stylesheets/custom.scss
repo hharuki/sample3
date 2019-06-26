@@ -130,14 +130,20 @@ h1, h2 {
       width: 35px;
       height: 30px;
       margin-left: 20px;
-      
+      filter: opacity(50%);
+    }
+    .icon{
+       width: 35px;
+      height: 30px;
+      margin-left: 20px;
+      filter: opacity(100%);
     }
     .index-icon{
       width: 35px;
       height: 30px;
       margin-left: 20px;
-      color: #ff2581;
     }
+    
   }
 }
 .comment-new-wrapper{
