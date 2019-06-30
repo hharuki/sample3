@@ -16,6 +16,8 @@ class TopicsController < ApplicationController
       flash.now[:danger] = "投稿に失敗しました"
       render :new
     end
+    
+    
   end
   
   private
